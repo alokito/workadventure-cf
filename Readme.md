@@ -8,7 +8,7 @@ It doesn't yet handle setting up the domain mappings with e.g. Route 53, or any 
 
 TLDR: use the website-demo branch from my fork: 
 
-https://github.com/alokito/workadventure/tree/website-demo
+    git clone -b website-demo https://github.com/alokito/workadventure.git
 
 ## A note on http
 

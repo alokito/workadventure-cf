@@ -1,6 +1,7 @@
 #!/bin/bash
 yum install -y docker
 service docker start
+groupadd docker
 usermod -a -G docker ec2-user
 curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/bin/docker-compose
 chmod +x /usr/bin/docker-compose
@@ -12,7 +13,7 @@ usermod -a -G docker ec2-user
 
 cd /home/ec2-user
 su ec2-user
-git clone https://github.com/thecodingmachine/workadventure.git
+git clone -b website-demo https://github.com/alokito/workadventure.git
 cd workadventure
 
 export DOMAIN='example.net'

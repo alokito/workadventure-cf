@@ -185,6 +185,7 @@
           "#!/bin/bash -xe\n",
           "yum install -y docker\n",
           "service docker start\n",
+          "groupadd docker\n",
           "usermod -a -G docker ec2-user\n",
           "curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/bin/docker-compose\n",
           "chmod +x /usr/bin/docker-compose\n",
@@ -196,7 +197,7 @@
           
           "cd /home/ec2-user\n",
           "su ec2-user\n",
-          "git clone https://github.com/thecodingmachine/workadventure.git\n",
+          "git clone -b website-demo https://github.com/alokito/workadventure.git\n",
           "cd workadventure\n",
           
           "export DOMAIN='",{ "Ref" : "Domain" },"'\n",
